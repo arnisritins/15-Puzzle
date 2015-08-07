@@ -48,7 +48,7 @@
 				if(n <= 15){
 					cell.classList.add('number');
 					cell.classList.add((i%2==0 && j%2>0 || i%2>0 && j%2==0) ? 'dark' : 'light');
-					cell.innerText = (n++).toString();
+					cell.innerHTML = (n++).toString();
 				} else {
 					cell.className = 'empty';
 				}
@@ -170,7 +170,7 @@
 		// Goes through all cells and checks numbers
 		for(var i = 0; i <= 3; i++){
 			for(var j = 0; j <= 3; j++){
-				if(n <= 15 && getCell(i, j).innerText != n.toString()){
+				if(n <= 15 && getCell(i, j).innerHTML != n.toString()){
 					// Order is not correct
 					return;
 				}
@@ -205,7 +205,7 @@
 				var adjacent = getAdjacentCells(getEmptyCell());
 				if(previousCell){
 					for(var j = adjacent.length-1; j >= 0; j--){
-						if(adjacent[j].innerText == previousCell.innerText){
+						if(adjacent[j].innerHTML == previousCell.innerHTML){
 							adjacent.splice(j, 1);
 						}
 					}
