@@ -83,7 +83,7 @@
 				
 				if(state == 1){
 					// Checks the order of numbers
-					checkOrder();
+					setTimeout(checkOrder, 150);
 				}
 			}
 		}
